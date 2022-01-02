@@ -19,7 +19,7 @@ Introduction to the intellectual faculties of computer science and the art of pr
 - and websites.
 
 Languages ​​include:
-- Ç,
+- C,
 - PHP,
 - JavaScript,
 - SQL plus,
