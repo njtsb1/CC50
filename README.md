@@ -31,6 +31,3 @@ Problem Sets inspired by the real world: domains of biology, cryptography, finan
 #### Links
 - [CC50 in Portuguese](https://cc50.com.br)
 - [original CS50](https://www.cs50.net)
-
-#### Observation
-- I didn't make the last pset because it needs a discontinued Google Earth library.
