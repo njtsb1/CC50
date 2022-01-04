@@ -1,21 +1,22 @@
 <?php
-	// Stock.php	CC50	Pset7	Define uma classe (ou seja, estrutura) para uma ação.
+	// Stock.php	CC50	Pset7	Defines a class (ie structure) for an action.
 
 	class Stock
 	{
-		// nome da ação
+		// action name
+
 		public $name = NULL;
 
-		// símbolo da ação
+		// action symbol
 		public $symbol = NULL;
 
-        // preço mais recente da ação
+        // latest share price
         public $price = NULL;
 
-		// baixa do dia mais recente
+		// download of the most recent day
 		public $low = NULL;
 
-		// alta do dia mais recente
+		// most recent day high
 		public $high = NULL;
 
 		/*
