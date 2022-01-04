@@ -1,19 +1,33 @@
-//Let's start programming?!
-//So one of the best things about Maxwell Dworkin (the Computer Science building of
-//Harvard) is the free candy machine in the lounge.
-//There are a lot of Skittles (bullets) and M&M's in this
-//machine. Want to guess how many Skittles are there?
-//Implement, in a file called skittles.c, a program
-//which first chooses a random (pseudo) number between 0 and 1023 and then asks you (the human) 
-//to guess what that value is. The program should keep asking you to guess.
-//until you guess the right amount, then he should thank you for playing.
-//Where to start? Allow us to give you some pieces of the puzzle.
-//To generate a random number, you can use a function called rand.
-//So you will want to put
-//#include <stdlib.h>
-//at the top of skittles.c together with
-//#include <stdio.h>
-
+//Vamos começar a programar?
+//Em uma máquina de doces há um monte de Skittles (balas) e M&Ms
+//implemente um programa que primeiro escolhe um número aleatório (pseudo) entre 0 e 1023 
+//e então pede que você adivinhe qual é esse valor. 
+//O programa deve continuar pedindo para você adivinhar
+//até que você adivinhe o valor certo, então ele deve lhe agradecer por jogar.
+//Por onde começar esse quebra-cabeça?
+//Permita-nos sugerir que você comece com este código:
+//int
+//main(void)
+//{
+// seed do PRNG
+//srand(time(NULL));
+// escolhe número pseudo-aleatório entre [0, 1023]
+//int skittles = rand() % 1024;
+//Deixamosa personalidade da sua máquina de Skittles falante inteiramente para você, 
+//mas abaixo se encontra um projeto possível.
+//Olá! Eu sou uma máquina de balas falante! Adivinhe quantos Skittles têm
+//dentro de mim. Dica: Estou pensando em um número entre 0 e 1023. Qual éele?
+//1
+//Haha! Tenho muito mais Skittles do que isso. Tente novamente.
+//-1
+//Não tente ser difícil... Adivinhe novamente.
+//1023
+//Ok, eles não são tantos assim. Tente novamente.
+//??
+//Você está certo! Nom nom nom nom.
+//Seu programa deve terminar quando o usuário acertar. O design acima responde aos inputs do
+//usuário de algumas maneiras diferentes, mas vamos deixar para você decidir o quanto você quer
+//variar as respostas dadas pelo seu programa.
 
 int
 main(void)
