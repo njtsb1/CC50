@@ -1,18 +1,18 @@
 <?php
-	// constants.php	CC50	Pset 7	Constantes globais
+	// constants.php	CC50	Pset 7	Global constants
 
-	// o nome do seu banco de dados
+	// the name of your database
 	define("DB_NAME", "finance");
 
-	// o administrador do seu banco de dados
+	// your database administrator
 	define("DB_USER", "root");
 
-	// a senha do seu banco de dados
+	// your database password
 	define("DB_PASS", "SENHA AQUI");
 
-	// o servidor onde o seu banco de dados está hospedado
+	// the server where your database is hosted
 	define("DB_SERVER", "localhost");
 
-	// Como o Yahoo Finance foi descontinuado, o código foi adaptado pra um CSV comum
+	// As Yahoo Finance was discontinued, the code was adapted to a common CSV
 	define("CSV", "URL AQUI");
 ?>
