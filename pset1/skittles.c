@@ -9,6 +9,10 @@
 //until you guess the right amount, then he should thank you for playing.
 //Where to start? Allow us to give you some pieces of the puzzle.
 //To generate a random number, you can use a function called rand.
+//So you will want to put
+//#include <stdlib.h>
+//at the top of skittles.c together with
+//#include <stdio.h>
 
 
 int
