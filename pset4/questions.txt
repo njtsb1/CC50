@@ -1,20 +1,20 @@
-I. Repare que main chama strcmp. O que significa se strcmp, após receber duas strings como argumentos, retornar 0? (Dica: RTFM)
-Ele compara as duas strings, retorna: -1 se a primeira for menor, 0 se forem iguais, 1 se a primeira for maior.
+I. Notice that main calls strcmp. What does it mean if strcmp, after taking two strings as arguments, returns 0? (Hint: RTFM)
+It compares the two strings, returns: -1 if the first is less, 0 if they are equal, 1 if the first is greater.
 
 ---
 
-II. Como você reescreveria a linha abaixo, extraída de main, usando if e else? int max = (!strcmp(g.level, "debug")) ? 9 : 1024;
-Sim:
+II. How would you rewrite the line below, taken from main, using if and else? int max = (!strcmp(g.level, "debug")) ? 9:1024;
+Yea:
 int max;
 if (strcmp(g.level) == "debug")
-	max = 9;
+max = 9;
 else
-	max = 1024;
+max = 1024;
 
 ---
 
-III. Em que circunstâncias o uso de sscanf abaixo, extraído de main, retorna 2 em vez de 1? sscanf(argv[2], " %d %c", &g.number, &c)
-Caso o usuário escolha um nível inválido, uma letra no terceiro argumento do prompt por exemplo.
+III. Under what circumstances does the use of sscanf below, taken from main, return 2 instead of 1? sscanf(argv[2], "%d %c", &g.number, &c)
+If the user chooses an invalid level, a letter in the third argument of the prompt for example.
 
 ---
 
