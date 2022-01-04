@@ -27,6 +27,6 @@
     }
     // else report error
     else
-        apologize("Usuário e/ou senha inválidos!");
+        apologize("Invalid username and/or password!");
 
 ?>
