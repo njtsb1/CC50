@@ -5,7 +5,7 @@
 //machine. Want to guess how many Skittles are there?
 //Implement, in a file called skittles.c, a program
 //which first chooses a random (pseudo) number between 0 and 1023 and then asks you (the human) 
-//to guess what that value is.14 The program should keep asking you to guess.
+//to guess what that value is. The program should keep asking you to guess.
 //until you guess the right amount, then he should thank you for playing.
 //Where to start? Allow us to give you some pieces of the puzzle.
 //To generate a random number, you can use a function called rand.
