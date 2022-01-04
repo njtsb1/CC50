@@ -15,7 +15,7 @@
  * Returns true if value is in array of n values, else false.
  */
 
-/* Código Original
+/* Original Code
 
 bool 
 search(int value, int array[], int n)
