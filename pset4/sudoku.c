@@ -33,7 +33,7 @@ struct
 	// the game's board
 	int board[9][9];
 
-	// tabuleiro de referência
+	// reference board
 	int r_board[9][9];
 
 	// the board's number
@@ -187,7 +187,7 @@ main(int argc, char *argv[])
 					g.board[g.y][g.x] = ch-'0';
 					mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), ch);
 					hide_banner();
-					show_banner("Número adicionado");
+					show_banner("Added number");
 					show_cursor();
 					won();
 				}
@@ -201,7 +201,7 @@ main(int argc, char *argv[])
 					g.board[g.y][g.x] = 0;
 					mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '.');
 					hide_banner();
-					show_banner("Número apagado");
+					show_banner("Number deleted");
 					show_cursor();
 				}
 				break;
@@ -211,7 +211,7 @@ main(int argc, char *argv[])
 				g.board[last[0]][last[1]] = last[2];
 				draw_numbers();
 				hide_banner();
-				show_banner("Movimento retrocedido");
+				show_banner("Back movement");
 				show_cursor();
 				break;
 
@@ -519,7 +519,7 @@ restart_game(void)
 	int maxy, maxx;
 	getmaxyx(stdscr, maxy, maxx);
 
-	// remove banner, ativa setas
+	// remove banner, activate arrows
 	hide_banner();
 	keypad(stdscr, true);
 
@@ -530,7 +530,7 @@ restart_game(void)
 	// remove log, if any
 	remove("log.txt");
 
-	// copia valores para o array de referência
+	// copy values to the reference array
 	for (int i = 0; i < 9; i++)
 		for (int j = 0; j < 9; j++)
 			g.r_board[i][j] = g.board[i][j];
@@ -625,14 +625,14 @@ startup(void)
 	return true;
 }
 
-// Verifica se o número é válido
+// Check if the number is valid
 
 bool
 num(int *ch)
 {
 	if (g.r_board[g.y][g.x] > 0) {
 		hide_banner();
-		show_banner("Número fixo");
+		show_banner("Fixed number");
 		show_cursor();
 		return false;
 	}
@@ -640,7 +640,7 @@ num(int *ch)
 	for (int i = 0; i < 9; i++) // int y = (g.y/9)*9, end = y+9; y < end;y++
 		if (g.board[g.y][i] == (*ch-'0')) {
 			hide_banner();
-			show_banner("Número igual horizontal");
+			show_banner("Horizontal equal number");
 			attron(COLOR_PAIR(5));
 			mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(i + i/3), g.board[g.y][i]+'0');
 			attroff(COLOR_PAIR(5));
@@ -651,7 +651,7 @@ num(int *ch)
 	for (int i = 0; i < 9; i++)
 		if (g.board[i][g.x] == (*ch-'0')) {
 			hide_banner();
-			show_banner("Número igual vertical");
+			show_banner("Vertical equal number");
 			attron(COLOR_PAIR(5));
 			mvaddch(g.top + i + 1 + i/3, g.left + 2 + 2*(g.x + g.x/3), g.board[i][g.x]+'0');
 			attroff(COLOR_PAIR(5));
@@ -663,7 +663,7 @@ num(int *ch)
 		for (int k = (g.x/3)*3, l = k+3; k < l; k++) // int x = (g.x/3)*3,endr = x+3 ; x<endr;x++
 			if (g.board[i][k] == (*ch-'0')) {
 				hide_banner();
-				show_banner("Número igual bloco");
+				show_banner("Number equal block);
 				attron(COLOR_PAIR(5));
 				mvaddch(g.top + i + 1 + i/3, g.left + 2 + 2*(k + k/3), g.board[i][k]+'0');
 				attroff(COLOR_PAIR(5));
@@ -674,7 +674,7 @@ num(int *ch)
 	return true;
 }
 
-// Verifica se ganhou
+// Check if you won
 
 bool
 won(void)
@@ -686,7 +686,7 @@ won(void)
 
 	keypad(stdscr, false);
 	hide_banner();
-	show_banner("Você venceu, parabéns!");
+	show_banner("You won, congratulations!");
 
 	for (int i = 0; i < 9; i++)
 		for (int j = 0; j < 9; j++) {
