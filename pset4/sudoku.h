@@ -8,7 +8,7 @@
  ***************************************************************************/
 
 // game's author
-#define AUTHOR "Matheus Ramalho de Oliveira"
+#define AUTHOR "njtsb1"
 
 // game's title
 #define TITLE "Sudoku"
