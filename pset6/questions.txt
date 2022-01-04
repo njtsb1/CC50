@@ -1,32 +1,32 @@
-0. O que é pneumoultramicroscopicossilicovulcanoconiose?
-Uma inflamação pulmonar causada pela inalação de cinza vulcânica.
+0. What is pneumoultramicroscopicosilicovulcanoconiosis?
+A lung inflammation caused by inhaling volcanic ash.
 
-1. De acordo com a sua página do manual, o que getrusage fazer?
-Obtêm o uso de recursos.
+1. According to your man page, what does getrusage do?
+Get resource usage.
 
-2. De acordo com a mesma página, quantos membros tem uma variável do tipo struct rusage?
+2. According to the same page, how many members does a variable of type struct rusage have?
 16.
 
-3. Porque você acha que passamos before e after por referência (em vez de por valor) para calculate, mesmo que nós não estejamos mudando os seus conteúdos?
-Desempenho. Através do seu endereço, acessar as variáveis que estão na estrutura, que é mais rápido do que copiar tudo para novas variáveis.
+3. Why do you think we pass before and after by reference (rather than by value) to calculate, even though we aren't changing their contents?
+Performance. Through its address, access the variables that are in the structure, which is faster than copying everything to new variables.
 
-4. Explicar com a maior precisão possível, em um parágrafo ou mais, como main age para ler as palavras de um arquivo. Em outras palavras, nos convença de que você realmente entende como o for loop dessa função funciona.
-Pegue caractere do arquivo. Se for letra ou apóstrofe, coloque o caractere em word[], ignora se for número ou maior que o limite, faz isso até o final da palavra. Depois termina a palavra com \0, atualiza o contador, verifica a ortografia, atualiza benchmark, imprime a palavra se estiver incorreta, repete até o arquivo acabar.
+4. Explain as accurately as possible, in a paragraph or more, how main acts to read the words from a file. In other words, convince us that you really understand how this function's for loop works.
+Get character from file. If it's a letter or apostrophe, put the character in word[], ignore if it's a number or greater than the limit, do it until the end of the word. Then end word with \0, update counter, check spelling, update benchmark, print word if it's incorrect, repeat until file runs out.
 
-5. Porque você acha que nós usamos fgetc para ler cada caracter de cada palavra ao vez ao invés de fscanf com uma string formatada como "%s" para ler palavras inteiras de uma vez? Dito de outra forma, que problemas poderiam surgir ao depender de fscanf para realizar essa tarefa?
-Seria mais complicado lidar com palavras com números ou maiores que o limite.
+5. Why do you think we use fgetc to read every character of every word in turn instead of fscanf with a string formatted like "%s" to read whole words at once? In other words, what problems could arise when relying on fscanf to accomplish this task?
+It would be more complicated to deal with words with numbers or greater than the limit.
 
-6. Por que você acha que nós declaramos tantos parâmetros const em dictionary.c e dictionary.h?
-Porque o valor destas variáveis não será alterado.
+6. Why do you think we declare so many const parameters in dictionary.c and dictionary.h?
+Because the value of these variables will not be changed.
 
-7. Qual estrutura de dado(s) você usou para implementar o seu corretor ortográfico? Certifique-se de não responder apenas "hash table", "trie", ou coisa parecida. Fale um pouco sobre o que está dentro de cada um dos seus "nós".
-Uma estrutura do tipo lista e uma tabela hash. Um array de tabelas hash é criado para apontar para as listas que armazenam palavras do dicionário.
+7. What data structure(s) did you use to implement your spell checker? Make sure you don't just answer "hash table", "trie", or something like that. Tell us a little about what is inside each of your "we".
+A list-type structure and a hash table. An array of hash tables is created to point to lists that store dictionary words.
 
-8. Quão lento era o seu código na primeira vez que você o fez funcionar?
-Tinha uma diferença pequena em relação a versão final.
+8. How slow was your code the first time you got it working?
+It had a small difference compared to the final version.
 
-9. Que tipos de alterações, se for o caso, você fez no seu código ao longo da semana (er, quintafeira), a fim de melhorar o seu desempenho?
-Troca da função hash e otimizações nas variáveis.
+9. What types of changes, if any, have you made to your code throughout the week (er, Thursday) in order to improve its performance?
+Hash function replacement and variable optimizations.
 
-10. Você sente que o seu código tem alguma parte pesada que você não foi capaz de desbastar?
-Não.
+10. Do you feel that your code has some heavy parts that you haven't been able to iron out?
+Do not.
