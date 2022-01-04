@@ -1,33 +1,33 @@
-//Vamos começar a programar?
-//Em uma máquina de doces há um monte de Skittles (balas) e M&Ms
-//implemente um programa que primeiro escolhe um número aleatório (pseudo) entre 0 e 1023 
-//e então pede que você adivinhe qual é esse valor. 
-//O programa deve continuar pedindo para você adivinhar
-//até que você adivinhe o valor certo, então ele deve lhe agradecer por jogar.
-//Por onde começar esse quebra-cabeça?
-//Permita-nos sugerir que você comece com este código:
+//Shall we start programming?
+//In a candy machine there are a bunch of Skittles (candy) and M&Ms
+//Implement a program that first chooses a random (pseudo) number between 0 and 1023
+//and then asks you to guess what that value is.
+//The program should keep asking you to guess
+//until you guess the right amount, then he should thank you for playing.
+//Where to start this puzzle?
+//Let us suggest that you start with this code:
 //int
 //main(void)
 //{
-// seed do PRNG
+// PRNG seed
 //srand(time(NULL));
-// escolhe número pseudo-aleatório entre [0, 1023]
+// choose pseudo-random number between [0, 1023]
 //int skittles = rand() % 1024;
-//Deixamosa personalidade da sua máquina de Skittles falante inteiramente para você, 
-//mas abaixo se encontra um projeto possível.
-//Olá! Eu sou uma máquina de balas falante! Adivinhe quantos Skittles têm
-//dentro de mim. Dica: Estou pensando em um número entre 0 e 1023. Qual éele?
+//We leave the personality of your Skittles machine speaking entirely to you,
+//but below is a possible project.
+//Hi! I am a talking bullet machine! Guess how many Skittles they have
+//inside of me. Hint: I'm thinking of a number between 0 and 1023. What is it?
 //1
-//Haha! Tenho muito mais Skittles do que isso. Tente novamente.
+//Haha! I have a lot more Skittles than that. Try again.
 //-1
-//Não tente ser difícil... Adivinhe novamente.
+//Don't try to be difficult... Guess again.
 //1023
-//Ok, eles não são tantos assim. Tente novamente.
+//Okay, they aren't that many. Try again.
 //??
-//Você está certo! Nom nom nom nom.
-//Seu programa deve terminar quando o usuário acertar. O design acima responde aos inputs do
-//usuário de algumas maneiras diferentes, mas vamos deixar para você decidir o quanto você quer
-//variar as respostas dadas pelo seu programa.
+//You're right! No no no no no.
+//Your program should terminate when the user gets it right. The design above responds to input from the
+//user in a few different ways, but we'll leave it up to you to decide how much you want
+//vary the answers given by your program.
 
 int
 main(void)
