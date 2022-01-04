@@ -1,16 +1,16 @@
-// dictionary.h CC50 Pset6 Declara a funcionalidade de um dicionário.
+// dictionary.h CC50 Pset6 Declare the functionality of a dictionary.
 
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
-#define SIZE 160000 // Tamanho da hashtable
-#define LENGTH 45 // Comprimento máximo de uma palavra (pneumonoultramicroscopicsilicovolcanoconiosis)
+#define SIZE 160000 // Hashtable size
+#define LENGTH 45 // Maximum length of one word (pneumonoultramicroscopicsilicovolcanoconiosis)
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Estrutura lista
+// List structure
 
 typedef struct no
 {
@@ -18,12 +18,12 @@ typedef struct no
     struct no *prox;
 }no;
 
-// Protótipos de funções.
+// Function prototypes.
 
 bool load(const char *dict);
 bool check(const char *word);
 unsigned int size(void);
 bool unload(void);
-unsigned int hash(const char *palavra);
+unsigned int hash(const char *word);
 
 #endif // DICTIONARY_H
