@@ -2,14 +2,14 @@ int
 main(int argc, char *argv[])
 {
 	if (argc != 2) {
-		printf("Erro 1. Digite uma palavra na linha de comando.\n");
+		printf("Erro 1. Type a word on the command line.\n");
 		return 1;
 	}
 
-	printf("Texto a ser criptografado:\n");
-	string texto = GetString();
+	printf("Text to be encrypted:\n");
+	string text = GetString();
 
-	int k = 0, l = strlen(texto), m = strlen(argv[1]);
+	int k = 0, l = strlen(text), m = strlen(argv[1]);
 
 	for (int i = 0, j = 0; i < l; i++) {
 		if (j == m)
@@ -23,16 +23,16 @@ main(int argc, char *argv[])
 		else
 			k = 0;
 
-		if (texto[i] >= 65 && texto[i] <= 90) {
-			texto[i] = (((texto[i] - 65) + k) % 26) + 65;
+		if (text[i] >= 65 && text[i] <= 90) {
+			text[i] = (((text[i] - 65) + k) % 26) + 65;
 			j++;
 		}
-		else if (texto[i] >= 97 && texto[i] <= 122) {
-			texto[i] = (((texto[i] - 97) + k) % 26) + 97;
+		else if (text[i] >= 97 && text[i] <= 122) {
+			text[i] = (((text[i] - 97) + k) % 26) + 97;
 			j++;
 		}
 
-		printf("%c", texto[i]);
+		printf("%c", text[i]);
 	}
 
 	printf("\n");
