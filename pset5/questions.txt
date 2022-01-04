@@ -1,56 +1,56 @@
-0. Quantas cores diferentes cada formato suporta?
-BMP: 16 milhões. GIF: 256. JPEG: 16 milhões. PNG: 16 milhões.
+0. How many different colors does each format support?
+BMP: 16 million. GIF: 256. JPEG: 16 million. PNG: 16 million.
 
-1. Qual destes formatos suporta animação?
-GIF e PNG.
+1. Which of these formats supports animation?
+GIF and PNG.
 
-2. Qual é a diferença entre a compressão com perdas e sem perdas?
-A compressão com perdas ocorre quando os dados pós-compressão são diferentes, mas parecido e útil em relação aos dados originais, e a compressão sem perdas ocorre quando os dados pós-compressão são idênticos aos originais.
+2. What is the difference between lossy and lossless compression?
+Lossy compression occurs when the post-compression data is different but similar and useful to the original data, and lossless compression occurs when the post-compression data is identical to the original.
 
-3. Qual destes formatos é comprimido com perdas?
-GIF e JPEG.
+3. Which of these formats is lossy compressed?
+GIF and JPEG.
 
-4. O que acontece, tecnicamente falando, quando um arquivo é removido de um sistema de arquivos FAT?
-A sua entrada, seu índice, é removido do diretório raiz, deixando todos os cluters ocupados por ele livres.
+4. What happens, technically speaking, when a file is removed from a FAT file system?
+Its entry, its index, is removed from the root directory, leaving all cluters occupied by it free.
 
-5. O que alguém como você pode fazer para garantir (com alta probabilidade) que os arquivos que você excluir não poderão ser recuperados?
-Usar uma ferramenta que tritura arquivos, ou seja, zera informações do hd.
+5. What can someone like you do to ensure (with high probability) that the files you delete cannot be recovered?
+Use a tool that shreds files, that is, resets hd information.
 
-6. O que é stdint.h?
-É um arquivo cabeçalho da linguagem de programação C que declara conjuntos de tipos inteiros com larguras especificas.
+6. What is stdint.h?
+It is a C programming language header file that declares sets of integer types with specific widths.
 
-7. Porque se usa uint8_t, uint32_t, int32_t e uint16_t em um programa?
-Para garantir que o consumo de bits na memória será igual em todos os computadores independente da arquitetura.
+7. Why do you use uint8_t, uint32_t, int32_t and uint16_t in a program?
+To ensure that the consumption of bits in memory will be the same on all computers regardless of architecture.
 
-8. Quantos bits tem um BYTE, uma DWORD, um LONG e uma WORD, respectivamente?
-BYTE = 8 bits, DWORD = 32, LONG = 32 em x86 e 64 em x64, WORD = 16.
+8. How many bits are there in a BYTE, a DWORD, a LONG and a WORD, respectively?
+BYTE = 8 bits, DWORD = 32, LONG = 32 in x86 and 64 in x64, WORD = 16.
 
-9. O que (em ASCII, decimal ou hexadecimal) devem ser os dois primeiros bytes de qualquer arquivo BMP?
-Os primeiros dois bytes são de assinatura que indicam que se trata de um arquivo BMP, dois caracteres, B e M, 424D em hexadecimal.
+9. What (in ASCII, decimal, or hexadecimal) should be the first two bytes of any BMP file?
+The first two bytes are signature which indicate that it is a BMP file, two characters, B and M, 424D in hexadecimal.
 
-10. Qual é a diferença entre bfSize e biSize?
-bfSize armazena o tamanho em bytes do arquivo bitmap, biSize armazena o número de bytes necessários para a estrutura.
+10. What is the difference between bfSize and biSize?
+bfSize stores the size in bytes of the bitmap file, biSize stores the number of bytes needed for the structure.
 
-11. O que significa se biHeight for negativo?
-Significa que seus bytes de pixels começam de cima para baixo, canto superior esquerdo.
+11. What does it mean if biHeight is negative?
+Means your pixel bytes start from top to bottom, top left corner.
 
-12. Que campo em BITMAPINFOHEADER especifica a cor do BMP (bits por pixel)?
-O campo biBitCount.
+12. Which field in BITMAPINFOHEADER specifies the BMP color (bits per pixel)?
+The biBitCount field.
 
-13. Por que fopen pode retornar NULL em copy.c:32?
-Caso a função não consiga abrir o arquivo do hd.
+13. Why can fopen return NULL in copy.c:32?
+If the function cannot open the hd file.
 
-14. Porque é que o terceiro argumento de fread é sempre 1 em nosso código?
-Para verificar se o arquivo começa com BM, pois todo BMP começa com esses dois caracteres.
+14. Why is the third argument of fread always 1 in our code?
+To check if the file starts with BM, as every BMP starts with these two characters.
 
-15. Qual o valor que copy.c:69 atribui a padding se bi.biWidth é 3?
+15. What value does copy.c:69 assign to padding if bi.biWidth is 3?
 Padding = 3.
 
-16. O que é que fseek faz?
-Move o cursor para uma determinada posição.
+16. What does fseek do?
+Moves the cursor to a certain position.
 
-17. O que é SEEK_CUR?
-Uma macro da função fseek que armazena a posição atual do cursor.
+17. What is SEEK_CUR?
+A macro of the fseek function that stores the current cursor position.
 
-18. Quem fez isso? E onde? E com que arma?
-Foi o professor Plum, no salão, com um castiçal. It was Professor Plum in the lounge with the candlestick.
+18. Who did this? And where? And with what weapon?
+It was Professor Plum, in the hall, with a candlestick. It was Professor Plum in the lounge with the candlestick.
