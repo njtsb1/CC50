@@ -1,5 +1,5 @@
 <?php
-	// common.php	CC50	Pset 7	Código comum a maioria das páginas.
+	// common.php	CC50	Pset 7	Code common to most pages.
 
     // display errors and warnings but not notices
     ini_set("display_errors", TRUE);
@@ -29,10 +29,10 @@
 
     // connect to database server
     if (($connection = @mysqli_connect(DB_SERVER, DB_USER, DB_PASS)) === FALSE)
-        apologize("Não foi possível conectar ao banco de dados. " .
-         "<br>Cheque os valores de DB_NAME, DB_PASS, e DB_USER em constants.php.");
+        apologize("Could not connect to database. " .
+         "<br>Check the values of DB_NAME, DB_PASS, and DB_USER in constants.php.");
 
     // select database
     if (@mysqli_select_db($connection, DB_NAME) === FALSE)
-        apologize("Não foi possível selecionar o banco de dados (" . DB_NAME . ").");
+        apologize("Could not select database (" . DB_NAME . ").");
 ?>
