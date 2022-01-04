@@ -4,7 +4,7 @@
  * CC50
  * Pset 5
  *
- * Redimensionador de BMP's de 24 bits.
+ * Resize BMP's de 24 bits.
  ***************************************************************************/
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ main(int argc, char *argv[])
 	int n = atoi(argv[1]);
 	if (n > 100 || n < 1)
 	{
-		printf("Valor de redimensionamento: 0 a 100.\n");
+		printf("Resize valueo: 0 a 100.\n");
 		return 2;
 	}
 
