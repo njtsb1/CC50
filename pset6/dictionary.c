@@ -1,11 +1,11 @@
-// dictionary.c CC50 Pset6 Implementa a funcionalidade de um dicionário.
+// dictionary.c CC50 Pset6 Implements the functionality of a dictionary.
 
 #include "dictionary.h"
 
 no *hashtable[SIZE] = {NULL};
-unsigned int palavras = 0;
+unsigned int words = 0;
 
-// Carrega dict na memória. Retorna true se bem sucedido senão false.
+// Load dict into memory. Returns true if successful if not false.
 
 bool
 load(const char *dict)
@@ -14,97 +14,97 @@ load(const char *dict)
     if (fp == NULL)
         return false;
 
-    char palavra[LENGTH+1];
-    unsigned int indice;
+    char word[LENGTH+1];
+    unsigned int index;
 
-    while (fscanf(fp,"%s\n",palavra) != EOF)
+    while (fscanf(fp,"%s\n",word) != EOF)
     {
-        palavras++;
-        no *novo = (no*)malloc(sizeof(no));
-        strcpy(novo->palavra, palavra);
-        indice = hash(palavra);
-        if (hashtable[indice] == NULL)
+        words++;
+        no *new = (no*)malloc(sizeof(no));
+        strcpy(new->word, word);
+        index = hash(word);
+        if (hashtable[index] == NULL)
         {
-            hashtable[indice] = novo;
-            novo->prox = NULL;
+            hashtable[index] = new;
+            new->prox = NULL;
         }
         else
         {
-            novo->prox = hashtable[indice];
-            hashtable[indice] = novo;
+            noew->prox = hashtable[index];
+            hashtable[index] = new;
         }
     }
     return true;
 }
 
-// Retorna true se a palavra está no dicionário senão false.
+// Returns true if the word is in the dictionary if not false.
 
 bool
 check(const char *word)
 {
     int len = strlen(word);
-    char palavra[LENGTH+1];
+    char word[LENGTH+1];
     for (int i = 0; i < len; i++)
-        palavra[i] = tolower(word[i]);
-    palavra[len] = '\0';
+        word[i] = tolower(word[i]);
+    word[len] = '\0';
 
-    unsigned int indice = hash(palavra);
-    if (hashtable[indice] == NULL)
+    unsigned int index = hash(word);
+    if (hashtable[index] == NULL)
         return false;
 
-    no *cursor = hashtable[indice];
+    no *cursor = hashtable[index];
     while (cursor != NULL)
     {
-        if (strcmp(palavra, cursor->palavra) == 0)
+        if (strcmp(word, cursor->word) == 0)
             return true;
         cursor = cursor->prox;
     }
     return false;
 }
 
-// Retorna o número de palavras no dicionário carregado.
+// Returns the number of words in the loaded dictionary.
 
 unsigned int
 size(void)
 {
-    return palavras;
+    return words;
 }
 
-// Descarrega dicionário da memória. Retorna true se bem sucedido senão false.
+// Unload dictionary from memory. Returns true if successful if not false.
 
 bool
 unload(void)
 {
-    unsigned int indice = 0;
-    while (indice < SIZE)
+    unsigned int index = 0;
+    while (index < SIZE)
     {
-        if (hashtable[indice] == NULL)
-            indice++;
+        if (hashtable[index] == NULL)
+            index++;
         else
         {
-            while (hashtable[indice] != NULL)
+            while (hashtable[index] != NULL)
             {
-                no *cursor = hashtable[indice];
-                hashtable[indice] = cursor->prox;
+                no *cursor = hashtable[index];
+                hashtable[index] = cursor->prox;
                 free(cursor);
             }
-            indice++;
+            index++;
         }
     }
     return true;
 }
 
-// Função hash, transforma palavra em número.
+// Hash function, transforms word into number.
 
 unsigned int
-hash(const char *palavra)
+hash(const char *word)
 {
     unsigned int hash = 0, n;
-    for (int i = 0; palavra[i] != '\0'; i++)
+    for (int i = 0; word[i] != '\0'; i++)
     {
-        if (isalpha(palavra[i])) // Caso alfabeto
-            n = palavra[i]-'a'+1;
-        else // Caso vírgula
+        if (isalpha(word[i])) // Alphabet case
+            n = word[i]-'a'+1;
+        else // Comma case
             n = 27;
         hash = ((hash << 3) + n) % SIZE;
     }
