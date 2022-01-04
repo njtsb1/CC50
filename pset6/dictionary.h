@@ -14,7 +14,7 @@
 
 typedef struct no
 {
-    char palavra[LENGTH+1];
+    char word[LENGTH+1];
     struct no *prox;
 }no;
 
