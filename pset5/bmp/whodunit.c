@@ -4,7 +4,7 @@
  * CC50
  * Pset 5
  *
- * Vamos revelar a mensagem do Coronel Mostarda.
+ * Let's reveal Colonel Mustard's message.
  ***************************************************************************/
 
 #include <stdio.h>
@@ -81,7 +81,7 @@ main(int argc, char *argv[])
 			// read RGB triple from infile
 			fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-			// substitui cores
+			// replace colors
 			if (triple.rgbtRed == 0xff)
 				triple.rgbtRed = 0x00;
 			if (triple.rgbtBlue == 0x00)
