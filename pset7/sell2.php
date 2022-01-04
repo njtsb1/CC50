@@ -9,20 +9,20 @@
 	$slices = mysqli_fetch_array($query);
 
 	if (empty($slices))
-		apologize("Você não possui nenhuma ação \"{$symbol}\".");
+		apologize("You have no shares \"{$symbol}\".");
 
 	if ($shares > $slices["shares"])
-		apologize("Você não pode vender mais do que possui.");
+		apologize("You can't sell more than what you have.");
 
 	if (!mysqli_query($connection, "UPDATE wallet SET shares = shares - {$shares} WHERE uid = {$_SESSION["uid"]} AND symbol = '{$symbol}'"))
-		apologize("Falha ao vender a ação \"{$stock->name}\".");
+		apologize("Failed to sell the share \"{$stock->name}\".");
 
 	if (!mysqli_query($connection, "UPDATE users SET cash = cash + {$stock->price} WHERE uid = {$_SESSION["uid"]}"))
-		apologize("Falha ao adicionar o dinheiro a sua carteira.");
+		apologize("Failed to add money to your wallet.");
 
 	if (!mysqli_query($connection, "INSERT INTO history (uid, operation, symbol, stocks, price)
 									VALUES ({$_SESSION["uid"]}, 'S', '{$stock->symbol}', {$shares}, {$stock->price})"))
-		apologize("Falha ao armazenar informações no histórico.");
+		apologize("Failed to store information in history.");
 
 	redirect("sell.php");
 ?>
