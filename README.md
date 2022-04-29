@@ -31,3 +31,4 @@ Problem Sets inspired by the real world: domains of biology, cryptography, finan
 #### Links
 - [CC50 in Portuguese](https://cc50.com.br)
 - [original CS50](https://www.cs50.net)
+- [MIT](./LICENSE) license.
