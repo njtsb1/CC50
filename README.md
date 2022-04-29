@@ -1,3 +1,5 @@
+Daily Learning
+
 ## Solutions for CC50/CS50 problem sets.
 > CC50 is a Portuguese adaptation of the CS50 course at Harvard.
 
